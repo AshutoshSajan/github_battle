@@ -1,0 +1,138 @@
+#root {
+	.container {
+		ul {
+			display: flex;
+			li {
+				margin-right: 20px;
+				a {
+					font-size: 20px;
+					color: #d0021b;
+				}
+			}
+		}	
+	}
+}
+
+.active {
+	font-weight: bold;
+}
+
+.home-container {
+	margin: 20px auto;
+	text-align: center;
+
+	h1 {
+		font-size: 50px;
+	}
+}
+
+.button {
+	color: #e6e6e6;
+	display: inline-block;
+	background: #111;
+	font-size: 30px;
+	margin-top: 40px;
+	width: 400px;
+	text-align: center;
+	padding: 5px 20px;
+	border-radius: 4px;
+}
+
+.button:active {
+	transform: translateY(1px);
+}
+
+.input-box-container {
+	margin-top: 20px;
+
+	h1 {
+		font-size: 30px;
+		display: block;
+		text-align: center;
+	}
+}
+.input {
+	font-size: 30px;
+	width: 500px;
+	padding: 2px 10px;
+	border: 1px solid #000;
+	margin-bottom: 10px;
+}
+.submit-btn {
+	display: block;
+	margin: 0 auto;
+	font-size: 18px;
+	background: #111;
+	color: #f3f3f3;
+	padding: 5px 10px;
+}
+
+.battle-btn {
+	display: block;
+	background: #111;
+	font-size: 26px;
+	margin: 100px auto;
+	padding: 5px 100px;
+	color: #fff;
+}
+
+.reset-btn{
+	background: #999;
+	margin: 10px auto;
+	color: #d0021b;
+	display: block;
+	font-size: 20px;
+	padding: 1px 5px;
+}
+
+.reset-btn:hover {
+	cursor: pointer;
+}
+
+.battle {
+	display: block;
+	margin : 40px auto;
+	background: #111;
+	color: #fff;
+	padding: 5px 100px;
+	font-size: 20px;
+}
+
+.networkError {
+	text-transform: uppercase;
+	text-align: center;
+	color: darkred;
+	font-weight: bold;
+	transition: all 1s ease-out 2s;
+}
+
+.repo-container {
+	display: grid;
+	justify-content: center;
+	margin: 40px 20px;
+	h1,p {
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+	}
+}
+
+.input::-webkit-input-placeholder {
+	font-size: 24px;
+}
+.result {
+	display: flex;
+	justify-content: space-around;
+	p {
+		font-size: 22px;
+	}
+}
+
+.userInfo {
+	.para{
+		margin-left: 50%;
+		transform: translateX(-30%);
+		text-align: left;
+		font-size: 20px;
+	}
+}
