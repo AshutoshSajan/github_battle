@@ -1,5 +1,4 @@
 import React from "react";
-// import Battle from "./Battle"
 
 export default class Player extends React.Component {
 	state = {

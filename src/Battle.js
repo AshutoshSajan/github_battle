@@ -107,7 +107,6 @@
 // }
 
 import React, { Component } from 'react';
-import Users from "./Users";
 import Player from "./Player";
 
 export default class Battle extends React.Component{

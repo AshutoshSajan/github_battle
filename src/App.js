@@ -7,10 +7,6 @@ import Home from './Home';
 import Battle from './Battle';
 import './Loading.css';
 
-// import Users from "./Users";
-// import Data from "./Data";
-
-
 class App extends Component {
   render() {
     return (
