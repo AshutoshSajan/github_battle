@@ -40,11 +40,13 @@ export default class Battle extends React.Component{
 					<Player playerName="one" updateState={this.updateState} handleReset={this.handleReset}/>
 					<Player playerName="two" updateState={this.updateState} handleReset={this.handleReset}/>
 				</div>
+				<div>
 				{
 					this.state.one && this.state.two && (!this.state.oneResult && !this.state.twoResult)  ? 
-					<button	className="battle" onClick={this.handleBattle}>Battle
+					<button	className="battle-btn" onClick={this.handleBattle}>Battle
 					</button> : ""
 				}
+				</div>
 			</section>
 		)
 	}
