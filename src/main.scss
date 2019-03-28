@@ -123,10 +123,13 @@
 .result {
 	display: flex;
 	justify-content: space-around;
-	p {
-		font-size: 22px;
-	}
 }
+.para {
+		font-size: 30px;
+		font-weight: bold;
+		margin-bottom: 20px;
+		font-style: italic;
+	}
 
 .userInfo {
 	.para{

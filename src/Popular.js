@@ -18,14 +18,15 @@ export default class Popular extends React.Component{
 	}
 
 	render(){
-		console.log(this.state.data)
-		// var error = error;
 		return (
 			<div>
 				{
 					navigator.onLine ? 
 						<div style={{display:"grid", gridTemplateColumns:"repeat(5, 1fr)", gridGap: "20px"}}>
-							{this.state.loading ? <Loading /> :this.state.repos.map((repo, index) => <Repo repoData={repo} rank={index + 1} />)}
+							{this.state.loading ? <Loading /> :this.state.repos.map((repo, index) => {
+								return (<Repo repoData={repo} rank={index + 1} key={repo.id}/>)
+							})
+						}
 						</div>
 				: <div className="networkError">No internet connection</div>
 			}
@@ -35,14 +36,13 @@ export default class Popular extends React.Component{
 }
 
  function Repo(props) {
- 	console.log(props);
 	const {name, owner} = props.repoData;
 	return (
 		<div className="repo-container">
 			<p>{"#" + props.rank}</p>
 			<h1>{name}</h1>
 			<img src={owner.avatar_url}
-			style={{width:"150px", borderRadius:"50%", marginTop:"20px"}}/>
+			style={{width:"150px", borderRadius:"50%", marginTop:"20px"}} alt={"players"}/>
 		</div>
 	)
 }
