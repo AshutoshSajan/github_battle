@@ -12,14 +12,18 @@ export default class Popular extends React.Component {
     };
   }
 
-  componentDidMount = (val = "All") => {
+  fetchData = (val = "all") => {
     this.setState({ loading: true });
     fetch(
       `https://api.github.com/search/repositories?q=stars:%3E1+language:${val}&sort=stars&order=desc&type=Repositories`
     )
       .then((res) => res.json())
-      .then(({ items }) => this.setState({ repos: items, loading: false }));
+      .then(({ items }) => {
+        this.setState({ repos: items, loading: false });
+      });
   };
+
+  componentDidMount = () => this.fetchData();
 
   // toggleClass = (e) => {
   // 	const currentState = this.state.active;
@@ -29,7 +33,7 @@ export default class Popular extends React.Component {
   //}
 
   handleLinks = (val) => {
-    this.componentDidMount(val);
+    this.fetchData(val);
     this.setState({ lang: val });
   };
 
@@ -58,9 +62,10 @@ export default class Popular extends React.Component {
 }
 
 function Repo(props) {
-  const { name, owner } = props.repoData;
+  const { name, owner, html_url } = props.repoData;
+
   return (
-    <div>
+    <a href={html_url} target="_blank" rel="noreferrer">
       <div className="repo-container">
         <p>{"#" + props.rank}</p>
         <h1>{name}</h1>
@@ -70,6 +75,6 @@ function Repo(props) {
           alt={"players"}
         />
       </div>
-    </div>
+    </a>
   );
 }
